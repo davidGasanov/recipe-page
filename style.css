@@ -136,6 +136,10 @@ header p {
   border-radius: 12px;
 }
 
+.preparation h2{
+    color: var(--rose-800)
+}
+
 ul,
 ol {
   display: flex;
