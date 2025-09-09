@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400 700;
+}
+
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  /* Font families */
+  --font-heading: "Young Serif", serif;
+  --font-body: "Outfit", sans-serif;
+
+  /* Font sizes */
+  --fs-1: 40px;
+  --fs-2: 28px;
+  --fs-3: 20px;
+  --fs-4: 16px;
+
+  /* Line heights */
+  --lh-100: 100%;
+  --lh-150: 150%;
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--stone-900);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-1);
+  line-height: var(--lh-100);
+  font-weight: var(--fw-regular);
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2);
+  line-height: var(--lh-100);
+  font-weight: var(--fw-regular);
+}
+
+h2 {
+  color: var(--rose-800);
+}
+
+.section-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-3);
+  line-height: var(--lh-100);
+  font-weight: var(--fw-semibold);
+}
+
+.body-bold {
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-bold);
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-regular);
+}
+
+/* HTML body tag, not body text */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--stone-100);
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-content {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+header p {
+  color: var(--stone-600);
+}
+
+.preparation {
+  background: var(--rose-50);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-body);
+  color: var(--stone-600);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-regular);
+  padding-left: 8px;
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  color: var(--stone-600);
+}
+
+.preparation li span,
+ol li span {
+  color: var(--stone-600);
+}
+
+.preparation span span,
+ol span span {
+  display: inline;
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-bold);
+}
+
+ul li::before {
+  content: "•";
+  color: var(--rose-800);
+  display: inline-block;
+  width: 32px;
+  font-size: 20px;
+}
+
+/* Ingredients */
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ingredients .subtitle {
+  color: var(--brown-800);
+}
+
+hr {
+  color: var(--stone-150);
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.instructions li {
+  display: flex;
+  gap: 16px;
+}
+
+.instructions .list-number {
+  display: block;
+  color: var(--brown-800);
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-bold);
+}
+
+/* Nutrition */
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nutrition th,
+.nutrition td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid;
+  border-color: var(--stone-150);
+  width: 115px;
+  text-align: start;
+}
+
+.nutrition th {
+  padding-left: 32px;
+  padding-right: 8px;
+}
+.nutrition td {
+  padding-right: 32px;
+  padding-left: 8px;
+}
+
+.nutrition > table > tbody > tr:last-child th,
+.nutrition > table > tbody > tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrition th {
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-regular);
+}
+
+.nutrition td {
+  font-family: var(--font-body);
+  font-size: var(--fs-4);
+  line-height: var(--lh-150);
+  font-weight: var(--fw-bold);
+  color: var(--brown-800);
+}
